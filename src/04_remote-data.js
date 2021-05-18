@@ -1,4 +1,4 @@
-const { default: got } = require("got/dist/source")
+const { default: got } = require('got/dist/source')
 
 /**
  *  This function fetches all todos from https://jsonplaceholder.typicode.com/todos
@@ -12,14 +12,14 @@ async function solution () {
   try {
     const todos = JSON.parse((await got.get('https://jsonplaceholder.typicode.com/todos')).body)
     const users = JSON.parse((await got.get('https://jsonplaceholder.typicode.com/users')).body)
-    const usersMap = {};
-    users.forEach(e => usersMap[e.id] = {...e, completed: 0} );
-    todos.forEach(e => { if (e.completed) usersMap[e.userId].completed ++ });
-    return Object.keys(usersMap).map(e => usersMap[e]);
+    const usersMap = {}
+    users.forEach(e => { usersMap[e.id] = { ...e, completed: 0 } })
+    todos.forEach(e => { if (e.completed) usersMap[e.userId].completed++ })
+    return Object.keys(usersMap).map(e => usersMap[e])
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
-  return null;
+  return null
 }
 
 module.exports = solution

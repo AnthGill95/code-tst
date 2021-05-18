@@ -5,12 +5,12 @@
  * @param {Array<string>} pageData
  */
 function solution (pageNumber, itemsPerPage, pageData) {
-  const pageNumberBound = Math.round(pageNumber) < 1 ? 1 : Math.round(pageNumber);
+  const pageNumberBound = Math.round(pageNumber) < 1 ? 1 : Math.round(pageNumber)
   const itemsPerPageInt = Math.round(itemsPerPage)
-  const offset = (pageNumberBound - 1) * itemsPerPageInt;
+  const offset = (pageNumberBound - 1) * itemsPerPageInt
   const pagedData = pageData.slice(offset, offset + itemsPerPageInt)
-  if (pagedData.length === 0) return null;
-  return pagedData;
+  if (pagedData.length === 0) return null
+  return pagedData
 }
 
 const data = [

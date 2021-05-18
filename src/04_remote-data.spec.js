@@ -16,9 +16,6 @@ test('all users have been accounted for', async () => {
 /// ////////////////////////////////////////////////////////////////////////////
 
 test('all have completed key and it is a number', async () => {
-  // Arrange
-  const expected = 10
-
   // Act
   const actual = await solution()
 

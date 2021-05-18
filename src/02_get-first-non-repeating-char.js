@@ -15,6 +15,7 @@ function solution (str) {
   })
   for (let i = 0; i < strArr.length; i++)
     if (chars[strArr[i]] === 1) return strArr[i];
+  return null;
 }
 
 module.exports = solution

@@ -3,7 +3,7 @@
  * @param {object} obj
  */
 function solution (obj) {
-
+  return Object.keys(obj).map(e => obj[e]);
 }
 
 module.exports = solution

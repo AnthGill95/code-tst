@@ -5,7 +5,11 @@
  * @param {Array<string>} pageData
  */
 function solution (pageNumber, itemsPerPage, pageData) {
-
+  const pageNumberBound = pageNumber < 1 ? 1 : pageNumber;
+  const offset = (pageNumberBound - 1) * itemsPerPage;
+  const pagedData = pageData.slice(offset, offset + itemsPerPage)
+  if (pagedData.length === 0) return null;
+  return pagedData;
 }
 
 const data = [

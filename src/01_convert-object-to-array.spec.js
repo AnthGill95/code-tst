@@ -35,3 +35,19 @@ test('should convert a dynamically created object to array', () => {
   // Assert
   expect(actual).toEqual(expected)
 })
+
+///////////////////////////////////////////////////////////////////////////////
+// Custom Tests ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+test('should return empty array when given a blank object', () => {
+  // Arrange
+  const input = {}
+  const expected = [];
+
+  // Act
+  const actual = solution(input)
+
+  // Assert
+  expect(actual).toEqual(expected)
+})

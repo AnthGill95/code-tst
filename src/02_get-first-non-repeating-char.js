@@ -5,6 +5,8 @@
  * @param {String} str
  */
 function solution (str) {
+  if (typeof str !== 'string') return null;
+  if (str.length === 0) return null;
   const chars = {};
   const strArr = [...str]
   strArr.forEach(c => {

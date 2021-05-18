@@ -75,3 +75,26 @@ test('Test 8 - page -1, 5 items per page', () => {
   // Assert
   expect(actual).toEqual(expected)
 })
+
+///////////////////////////////////////////////////////////////////////////////
+// Custom Tests ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+test('Test 9 - page 1.5, 5 items per page', () => {
+  // Arrange
+  const expected = ['f', 'g', 'h', 'i', 'j']
+  // Act
+  const actual = solution(1.5, 5, data)
+  // Assert
+  expect(actual).toEqual(expected)
+})
+
+
+test('Test 10 - page 1, 5.5 items per page', () => {
+  // Arrange
+  const expected = ['a', 'b', 'c', 'd', 'e', 'f']
+  // Act
+  const actual = solution(1, 5.5, data)
+  // Assert
+  expect(actual).toEqual(expected)
+})

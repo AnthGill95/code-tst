@@ -5,9 +5,10 @@
  * @param {Array<string>} pageData
  */
 function solution (pageNumber, itemsPerPage, pageData) {
-  const pageNumberBound = pageNumber < 1 ? 1 : pageNumber;
-  const offset = (pageNumberBound - 1) * itemsPerPage;
-  const pagedData = pageData.slice(offset, offset + itemsPerPage)
+  const pageNumberBound = Math.round(pageNumber) < 1 ? 1 : Math.round(pageNumber);
+  const itemsPerPageInt = Math.round(itemsPerPage)
+  const offset = (pageNumberBound - 1) * itemsPerPageInt;
+  const pagedData = pageData.slice(offset, offset + itemsPerPageInt)
   if (pagedData.length === 0) return null;
   return pagedData;
 }
